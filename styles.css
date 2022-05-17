@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800,900|Barlow:300,400,500,600,700,800,900&display=swap");
+
+:root{
+    --color1 : rgb(49, 97, 101);
+    --color2 : rgb(140, 210, 196);
+    --color3 : rgba(0, 0, 0, 0.1);
+    --color4 : rgb(229, 228, 234);
+    --color5 : rgb(140, 140, 140);
+    --color6 : rgba(116, 176, 164, 0.8);
+    --color7 : rgb(96, 96, 96);
+    --color8 : rgb(80, 80, 80);
+    --color9 : rgb(71, 71, 71);
+    --color10 : rgb(64, 62, 62);
+    --color11 : rgba(43, 43, 43, 0.7);
+}
+body{
+    margin: 0;
+    
+    overflow-x: hidden;
+    font-family: "Barlow", sans-serif;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(100deg , var(--color1) , var(--color2));
+}
+.toggle-btn{
+    position: absolute;
+    width: 100px;
+    left: calc(50% - 50px);
+    top: 30px;
+    text-align: center;
+    color: var(--color2);
+    text-transform: uppercase;
+}
+.toggle-btn .toggle {
+    width: 60%;
+    height: 25px;
+    background: white;
+    left: 20%;
+    position: relative;
+    border-radius: 15px;
+    border: 3px solid var(--color4);
+    cursor: pointer;
+}
+.toggle-btn .toggle .btn{
+    width: 23px;
+    height: 23px;
+    background: var(--color4);
+    position: relative;
+    left: 0;
+    border-radius: 15px;
+    box-shadow: 4px 0 6px var(--color3);
+    border: 1px solid white;
+    transition: all 0.4s ease-in;
+}
+
+.calculator{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    left: calc(50% - 150px);
+    top: 150px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 8px 8px var(--color3);
+    transition: all 0.5s ease-in;
+    /* transform: ; */
+}
+.calculator.flip-in {
+    -webkit-transform: rotate3d(0, 10, 0, 90deg);
+            transform:perspective(400px) rotate3d(0, 10, 0, 90deg) ;
+}
+.calculator.flip-out {
+    -webkit-transform: rotate3d(0, 10, 0, 0deg);
+            transform: rotate3d(0, 10, 0, 0deg) ;
+}
+.calculator:hover{
+    box-shadow: none;
+}
+.calculator .display-window{
+    width: calc(100% - 50px);
+    height: calc(100px - 20px);
+    background: var(--color4);
+    color: var(--color1);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 5px;
+    padding:10px 15px;
+    text-align: right;
+}
+.calculator .display-window .up{
+    width: 100%;
+    height: 40px;
+}
+.calculator .display-window .down{
+    width: 100%;
+    height: 35px;
+    padding-top: 5px;
+    font-size: 33px;
+}
+.calculator .display-window .down .down-left{
+    width: 8%;
+    height: 100%;
+    float: left;
+}
+.calculator .display-window .down .down-right{
+    width: 90%;
+    height: 100%;
+    float: right;
+    overflow: hidden;
+}
+.calculator .buttons{
+    background: var(--color4);
+    width: calc(100% - 20px);
+    height: 270px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    border-radius: 5px;
+}
+.calculator .buttons .row{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    padding: 2px 0;
+    background: white;
+}
+.calculator .buttons input{
+    width: calc(25% - 3px);
+    height: 50px;
+    background: var(--color4);
+    color: var(--color1);
+    border: none;
+    padding: 1px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.calculator .buttons input:hover{
+    background: var(--color6);
+}
+.calculator .buttons .two-btn{
+    width: calc(50% - 2px);
+}
+.calculator .buttons .top-left{
+    border-radius: 5px 0 0 0;
+}
+.calculator .buttons .top-right{
+    border-radius: 0 5px 0 0;
+}
+.calculator .buttons .bottom-left{
+    border-radius: 0 0 0 5px;
+}
+.calculator .buttons .bottom-right{
+    border-radius: 0 0 5px 0;
+}
+.calculator .buttons .green-dark{
+    color: white;
+    background: linear-gradient(45deg , var(--color1) , var(--color2));
+}
+.calculator .buttons .green-light{
+    background: var(--color2);
+    color: rgb(36, 36, 36);
+}
+.calculator .buttons .gray-dark{
+    background: var(--color5);
+    color: rgb(36, 36, 36);
+}
+
+
+
+/* -----------------------------dark mode--------------------------- */
+.toggle-btn .toggle.dark-mode {
+    background: var(--color10);
+    border: 3px solid var(--color8);
+}
+.toggle-btn .toggle.dark-mode .btn{
+    left: calc(100% - 25px);
+    background: var(--color1);
+    border: 1px solid black;
+    box-shadow: -1px 0 6px var(--color11);
+}
+.calculator.dark-mode{
+    /* transform: perspective(200px); */
+    background: var(--color7);
+}
+.calculator.dark-mode .display-window{
+    background: linear-gradient(90deg , var(--color9),var(--color10));
+    color: var(--color2);
+}
+.calculator.dark-mode .buttons{
+    background: var(--color8);
+}
+.calculator.dark-mode .buttons .row{
+    background: var(--color7);
+}
+.calculator.dark-mode .buttons input{
+    background: var(--color8);
+    color: var(--color2)
+}
+.calculator.dark-mode .buttons input:hover{
+    background: var(--color11);
+}
+.calculator.dark-mode .buttons .green-dark{
+    color: white;
+    background: linear-gradient(45deg , var(--color1) , var(--color2));
+}
+.calculator.dark-mode .buttons .green-light{
+    background: var(--color10);
+    color: var(--color4);
+}
+.calculator.dark-mode .buttons .gray-dark{
+    background: var(--color9);
+    color: var(--color5);
+}

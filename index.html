@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="main">
+        <div class="toggle-btn">
+            <p>dark mode</p>
+            <div class="toggle">
+                <div class="btn"></div>
+            </div>
+        </div>
+        <div class="calculator">
+            <div class="display-window">
+                <div class="up"></div>
+                <div class="down">
+                    <div class="down-left"></div>
+                    <div class="down-right"></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="row">
+                    <input type="button" value="DEL" class="two-btn top-left gray-dark delete-btn">
+                    <input type="button" value="🡠" class="gray-dark backspace-btn">
+                    <input type="button" value="/" class="top-right green-light sign-btn">
+                </div>
+                <div class="row">
+                    <input type="button" value="7" class="number-btn">
+                    <input type="button" value="8" class="number-btn">
+                    <input type="button" value="9" class="number-btn">
+                    <input type="button" value="*" class="green-light sign-btn">
+                </div>
+                <div class="row">
+                    <input type="button" value="4" class="number-btn">
+                    <input type="button" value="5" class="number-btn">
+                    <input type="button" value="6" class="number-btn">
+                    <input type="button" value="-" class="green-light sign-btn">
+                </div>
+                <div class="row">
+                    <input type="button" value="1" class="number-btn">
+                    <input type="button" value="2" class="number-btn">
+                    <input type="button" value="3" class="number-btn">
+                    <input type="button" value="+" class="green-light sign-btn">
+                </div>
+                <div class="row">
+                    <input type="button" value="0" class="number-btn bottom-left">
+                    <input type="button" value="." class="point-btn">
+                    <input type="button" value="=" class="two-btn bottom-right green-dark equal-btn">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
